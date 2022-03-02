@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <form action="" method="get">
+
+    <!-- fieldset creates like a border -->
+    <fieldset>
+
+    <!-- normal text input -->
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Give your name">
+        </div>
+
+        <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" maxlength="5">
+        </div>
+
+    <!-- Email input -->
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="MaxMustermann@gmail.de">
+        </div>
+
+    <!-- number input -->
+        <div>
+            <label for="number">Age</label>
+            <input type="number" id="number" name="number" min="1">
+        </div>
+
+    <!-- date like birthday input -->
+        <div>
+            <label for="date">birthday</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+    </fieldset>
+        
+    <!-- Food -->
+        <div>
+            <label for="banana">Banana</label>
+            <input type="checkbox" name="banana" id="banana">
+        </div>
+        <div>
+            <label for="apple">Apple</label>
+            <input type="checkbox" name="apple" id="apple">
+        </div>
+
+    <!-- Gender -->
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+        </div>
+        <div>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+        </div>
+
+    <!-- Dropdown -->
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor">
+                <!-- both "options" do the same. (selected not in count)-->
+                <option value="Green">Green</option>
+                <option value="Red" label="Red" selected></option>
+            </select>
+        </div>
+    
+    <!-- Textarea -->
+        <div>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        </div>
+    
+    <!-- hidden input -->
+        <div>
+            <input type="hidden" name="hidden" value="DCI">
+        </div>
+
+    <!-- password Input -->
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+    <!-- upload file input -->
+        <div>
+            <label for="file">File</label>
+            <input type="file" name="file" id="file">
+        </div>
+
+    <!-- color Input -->
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+    
+    <!-- search with placeholder Input -->
+        <div>
+            <label for="search">Search</label>
+            <input type="text" name="search" id="search" placeholder="Search...">
+        </div>
+
+    <!-- text input with default value -->
+        <div>
+            <label for="car">Car</label>
+            <input type="text" id="car" name="car" value="VW">
+        </div>
+
+    <!-- buttons submit and reset -->
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+
+    </form>
+    
+
+
+    <form action="javascript:handelIt()" name="myform">
+        <input type="text" name="hey" id="hey" placeholder="Give your name...">
+        <input type="submit" value="Send" name="Submit">
+    </form>
+
+    <script type="text/javascript">
+        function handelIt (){
+            let name = document.getElementById("hey").value;
+            alert("Hello" + name);
+        }
+    </script>
+
+</body>
+</html>
